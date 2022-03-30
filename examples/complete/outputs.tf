@@ -33,13 +33,3 @@ output "endpoint_group_id" {
   description = "The resource ID in terraform of Endpoint Group."
   value       = module.example.endpoint_group_id
 }
-
-output "eip_address_id" {
-  description = "The resource ID in terraform of Address."
-  value       = resource.alicloud_eip_address.eip_address.id
-}
-
-output "this_eip_address_ip_address" {
-  description = "The address of the EIP."
-  value       = resource.alicloud_eip_address.eip_address.ip_address
-}
