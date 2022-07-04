@@ -94,8 +94,8 @@ variable "port_ranges" {
   description = "The portRanges of the listener."
   type        = map(number)
   default = {
-    from_port = 60
-    to_port   = 70
+    from_port = 8080
+    to_port   = 8080
   }
 }
 
@@ -114,14 +114,9 @@ variable "proxy_protocol" {
 variable "protocol" {
   description = "Type of network transport protocol monitored. Default value is TCP. Valid values: TCP, UDP, HTTP, HTTPS."
   type        = string
-  default     = "TCP"
+  default     = "HTTPS"
 }
 
-variable "certificates" {
-  description = "The certificates of the listener.This parameter needs to be configured only for monitoring of the HTTPS protocol."
-  type        = map(string)
-  default     = {}
-}
 #alicloud_ga_endpoint_group
 variable "endpoint_group_name" {
   description = "The specification of endpoint group name."
@@ -170,7 +165,7 @@ variable "port_overrides" {
   type        = map(number)
   default = {
     endpoint_port = 80
-    listener_port = 60
+    listener_port = 8080
   }
 }
 
