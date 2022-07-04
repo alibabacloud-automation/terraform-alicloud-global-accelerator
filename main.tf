@@ -43,6 +43,9 @@ resource "alicloud_ga_listener" "listener" {
   name            = var.listener_name
   proxy_protocol  = var.proxy_protocol
   protocol        = var.protocol
+  certificates  {
+    id        = lookup(var.certificates, "id", null)
+  }
   port_ranges {
     from_port = lookup(var.port_ranges, "from_port", null)
     to_port   = lookup(var.port_ranges, "to_port", null)

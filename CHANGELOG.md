@@ -1,3 +1,5 @@
-## 1.0.0 (2022-03-03)
+## 1.0.1 (2022-06-30)
 
-- Project initialization.
+- Project initialization.[GH-1](https://github.com/terraform-alicloud-modules/terraform-alicloud-global-accelerator/pull/1)
+- Optimize the example.[GH-3](https://github.com/terraform-alicloud-modules/terraform-alicloud-global-accelerator/pull/3)
+- fix certificates field.[GH-4](https://github.com/terraform-alicloud-modules/terraform-alicloud-global-accelerator/pull/4)
