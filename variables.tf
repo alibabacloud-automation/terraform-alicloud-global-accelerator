@@ -116,7 +116,7 @@ variable "payment_type" {
 variable "billing_type" {
   description = "The billing type. Valid values: PayBy95, PayByTraffic."
   type        = string
-  default     = "PayBy95"
+  default     = null
 }
 
 variable "cbn_geographic_region_ida" {
@@ -134,7 +134,7 @@ variable "cbn_geographic_region_idb" {
 variable "ratio" {
   description = "The minimum percentage for the pay-by-95th-percentile metering method. Valid values: 30 to 100."
   type        = number
-  default     = 50
+  default     = null
 }
 #alicloud_ga_bandwidth_package_attachment
 variable "create_bandwidth_package_attachment" {
