@@ -76,10 +76,8 @@ module "example" {
   duration                            = var.duration
   bandwidth_package_auto_pay          = var.bandwidth_package_auto_pay
   payment_type                        = "Subscription"
-  billing_type                        = "PayByTraffic"
   cbn_geographic_region_ida           = "China-mainland"
   cbn_geographic_region_idb           = "Global"
-  ratio                               = 40
   create_bandwidth_package_attachment = true 
   #alicloud_ga_listener
   create_listener                     = true
