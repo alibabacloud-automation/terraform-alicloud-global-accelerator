@@ -1,4 +1,8 @@
-## 1.3.0 (Unreleased)
+## 1.4.0 (Unreleased)
+## 1.3.0 (2024-11-25)
+
+- examples: improve the examples [GH-7](https://github.com/alibabacloud-automation/terraform-alicloud-global-accelerator/pull/7)
+
 ## 1.2.0 (2024-09-03)
 
 - module: remove default value for ratio and billing_type [GH-6](https://github.com/alibabacloud-automation/terraform-alicloud-global-accelerator/pull/6)
