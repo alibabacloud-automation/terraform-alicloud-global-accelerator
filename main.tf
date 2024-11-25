@@ -43,8 +43,8 @@ resource "alicloud_ga_listener" "listener" {
   name            = var.listener_name
   proxy_protocol  = var.proxy_protocol
   protocol        = var.protocol
-  certificates  {
-    id        = lookup(var.certificates, "id", null)
+  certificates {
+    id = lookup(var.certificates, "id", null)
   }
   port_ranges {
     from_port = lookup(var.port_ranges, "from_port", null)
@@ -55,7 +55,7 @@ resource "alicloud_ga_listener" "listener" {
 resource "alicloud_ga_endpoint_group" "endpoint_group" {
   count                         = var.create_endpoint_group ? 1 : 0
   accelerator_id                = local.this_accelerator_id
-  listener_id                   = concat(alicloud_ga_listener.listener.*.id, [""])[0]
+  listener_id                   = concat(alicloud_ga_listener.listener[*].id, [""])[0]
   endpoint_group_region         = var.endpoint_group_region
   description                   = var.endpoint_group_description
   endpoint_group_type           = var.endpoint_group_type
